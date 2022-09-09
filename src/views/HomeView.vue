@@ -8,10 +8,6 @@
         ><n-h1 style="color: white; font-weight: 400">Christopher Smith</n-h1>
         <n-avatar round src="src/assets/ProfessionalPic.jpg" :size="400"
       /></n-space>
-      <n-image
-        width="45px"
-        href="/ChristopherGSmith/assets/ResumeLogo.2eb7e7b4.png"
-      />
     </n-gi>
     <n-gi>
       <n-space vertical align="center" style="width: 600px"></n-space>
