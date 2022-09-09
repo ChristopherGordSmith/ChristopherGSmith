@@ -6,7 +6,10 @@
     <n-gi>
       <n-space vertical align="center"
         ><n-h1 style="color: white; font-weight: 400">Christopher Smith</n-h1>
-        <n-avatar round src="/src/assets/professionalpic.jpg" :size="400"
+        <n-avatar
+          round
+          src="/./christophergsmith/src/assets/professionalpic.jpg"
+          :size="400"
       /></n-space>
     </n-gi>
     <n-gi>
