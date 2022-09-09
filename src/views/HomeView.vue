@@ -7,7 +7,7 @@
       <n-gi style="height: 400px">
         <n-space vertical align="center"
           ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
-          <n-avatar round src="src/assets/professionalpic.JPG" :size="300"
+          <n-avatar round src="../assets/professionalpic.JPG" :size="300"
         /></n-space>
       </n-gi>
       <n-gi style="height: 400px"
