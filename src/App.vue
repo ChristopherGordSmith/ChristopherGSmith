@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import logo from "./assets/ResumeLogo.png";
 </script>
 
 <template>
@@ -8,8 +7,11 @@ import logo from "./assets/ResumeLogo.png";
     <n-layout-header mode="horizontal" style="background: #e4572e">
       <n-grid style="height: 50px; width: 100%" :cols="4">
         <n-gi>
-          <n-avatar :src="logo" :size="40" style="background: #ffffff" />
-          <img src="src/assets/ResumeLogo.png" alt="" />
+          <n-avatar
+            src="src/assets/resumelogo.png"
+            :size="40"
+            style="background: #ffffff"
+          />
         </n-gi>
         <n-gi :span="2.5" :offset="0.5">
           <router-link class="topNavigation" to="/">Home</router-link>
