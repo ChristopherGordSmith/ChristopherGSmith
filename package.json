@@ -1,6 +1,5 @@
 {
-  "homepage": "https://christophergordsmith.github.io/ChristopherGSmith",
-  "name": "christophergordsmith",
+  "name": "christophergsmith",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
