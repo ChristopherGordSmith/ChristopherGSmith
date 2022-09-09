@@ -5,17 +5,12 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <n-layout position="absolute" :native-scrollbar="false">
     <n-layout-header mode="horizontal" style="background: #e4572e">
-      <n-grid style="height: 50px; width: 100%" :cols="4">
-        <n-gi>
-          <n-avatar
-            src="/src/assets/resumelogo.png"
-            :size="40"
-            style="background: #ffffff"
-          />
-        </n-gi>
-        <n-gi :span="2.5" :offset="0.5">
-          <router-link class="topNavigation" to="/">Home</router-link>
-          <router-link class="topNavigation" to="/about">About me</router-link>
+      <n-grid style="height: 50px; width: 100%" :cols="12">
+        <n-gi :span="1">
+          <n-space justify="space-around" align="center" style="height: 100%">
+            <router-link class="topNavigation" to="/">Home</router-link>
+            <router-link class="topNavigation" to="/about">Blogs</router-link>
+          </n-space>
         </n-gi>
       </n-grid>
     </n-layout-header>
@@ -31,26 +26,27 @@ import { RouterLink, RouterView } from "vue-router";
     <n-layout-footer>
       <n-grid
         style="background: #e07a5f; min-height: 100px; width: 100%"
-        :cols="3"
+        :cols="2"
         item-responsive
         :x-gap="100"
       >
         <n-gi>
-          <n-space vertical>
-            <n-h3>item 1 </n-h3>
-            <n-h3>item 2</n-h3>
+          <n-space vertical align="center">
+            <n-h3>Address: Mansfield, TX, 76063</n-h3>
+            <n-h3>Phone: (682)-558-3975</n-h3>
           </n-space>
         </n-gi>
         <n-gi>
-          <n-space vertical>
-            <n-h3>item 1 </n-h3>
-            <n-h3>item 2</n-h3>
-          </n-space>
-        </n-gi>
-        <n-gi>
-          <n-space vertical>
-            <n-h3>item 1 </n-h3>
-            <n-h3>item 2</n-h3>
+          <n-space vertical align="center">
+            <n-h3>Email: christophergsmith3975@gmail.com</n-h3>
+            <n-h3
+              >LinkedIn Profile:
+              <a
+                href="https://www.linkedin.com/in/christophergsmith3975"
+                target="_blank"
+                >www.linkedin.com/in/christophergsmith3975</a
+              ></n-h3
+            >
           </n-space>
         </n-gi>
       </n-grid>
