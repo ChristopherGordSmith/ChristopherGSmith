@@ -6,26 +6,25 @@ import { RouterLink, RouterView } from "vue-router";
   <n-layout position="absolute" :native-scrollbar="false">
     <n-layout-header mode="horizontal" style="background: #e4572e">
       <n-grid style="height: 50px; width: 100%" :cols="12">
-        <n-gi :span="1">
+        <n-gi :span="2">
           <n-space justify="space-around" align="center" style="height: 100%">
             <router-link class="topNavigation" to="/">Home</router-link>
-            <router-link class="topNavigation" to="/about">Blogs</router-link>
+            <router-link class="topNavigation" to="/blogs">Blogs</router-link>
+            <a href="src/assets/ChristopherGSmith3975_Resume.pdf" download
+              >My Resume</a
+            >
           </n-space>
         </n-gi>
       </n-grid>
     </n-layout-header>
     <n-layout>
-      <n-space
-        justify="center"
-        align="center"
-        style="background: #011627; min-height: 750px"
-      >
+      <n-space justify="center" style="background: #011627; min-height: 750px">
         <RouterView />
       </n-space>
     </n-layout>
-    <n-layout-footer>
+    <n-layout-footer style="background: #e07a5f">
       <n-grid
-        style="background: #e07a5f; min-height: 100px; width: 100%"
+        style="min-height: 100px; width: 100%; padding-top: 20px"
         :cols="2"
         item-responsive
         :x-gap="100"
