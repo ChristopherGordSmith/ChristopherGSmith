@@ -1,12 +1,4 @@
 <script setup lang="ts">
-import propic from "src/assets/professionalpic.jpg";
-export default {
-  data() {
-    return {
-      pic: propic,
-    };
-  },
-};
 </script>
 
 <template>
@@ -15,7 +7,7 @@ export default {
       <n-gi style="height: 400px">
         <n-space vertical align="center"
           ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
-          <n-avatar round :src="pic" :size="300"
+          <n-avatar round src="src/assets/professionalpic.jpg" :size="300"
         /></n-space>
       </n-gi>
       <n-gi style="height: 400px"
