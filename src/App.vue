@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from "vue-router";
           <n-space justify="space-around" align="center" style="height: 100%">
             <router-link class="topNavigation" to="/">Home</router-link>
             <router-link class="topNavigation" to="/blogs">Blogs</router-link>
-            <a href="src/assets/ChristopherGSmith3975_Resume.PDF" download
+            <a :href="src / assets / ChristopherGSmith3975_Resume.pdf" download
               >My Resume</a
             >
           </n-space>
