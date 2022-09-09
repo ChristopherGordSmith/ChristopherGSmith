@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from "vue-router";
       <n-grid style="height: 50px; width: 100%" :cols="4">
         <n-gi>
           <n-avatar
-            src="src/assets/ResumeLogo.png"
+            src="src/assets/ResumeLogo.PNG"
             :size="40"
             style="background: #ffffff"
           />
