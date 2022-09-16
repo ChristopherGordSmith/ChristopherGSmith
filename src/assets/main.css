@@ -17,5 +17,14 @@ a:hover {
 }
 
 .dropdown:hover {
-  background: #3d405b
+  background: #3d405b;
+}
+
+#project {
+  transition: 0.4s;
+  width: fit-content;
+}
+
+#project:hover {
+  background: white;
 }

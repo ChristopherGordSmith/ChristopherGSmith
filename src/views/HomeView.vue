@@ -16,7 +16,7 @@ export default defineComponent({
       <n-gi>
         <n-space vertical align="center"
           ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
-          <n-avatar round :src="`${base}src/assets/professionalpic.jpg`" :size="300"
+          <n-avatar round src="../assets/professionalpic.jpg" :size="300"
         /></n-space>
       </n-gi>
       <n-gi
@@ -118,7 +118,7 @@ export default defineComponent({
     <n-grid cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen" :x-gap="100">
       <n-gi>
         <n-space vertical>
-          <n-h3 style="color: #e07a5f">Secret Santa</n-h3>
+          <n-h3 id="project" style="color: #e07a5f; cursor: pointer" @click="$router.push('/projects')">Secret Santa</n-h3>
           <n-h3 style="color: white"
             >In this project my team designed a website that would automate the
             process and preserve the secrecy of the traditional "Secret Santa"
@@ -131,7 +131,7 @@ export default defineComponent({
       </n-gi>
       <n-gi>
         <n-space vertical>
-          <n-h3 style="color: #e07a5f">Animal Voice App</n-h3>
+          <n-h3 id="project" style="color: #e07a5f; cursor: pointer" @click="$router.push('/projects')">Animal Voice App</n-h3>
           <n-h3 style="color: white;"
             >In this project my team designed an app that would take in audio
             files and decipher what was recorded. We used Andriod Studio and its

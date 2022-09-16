@@ -9,6 +9,10 @@ export default defineComponent({
       base: import.meta.env.BASE_URL,
       options: [
         {
+          label: "Secret Santa",
+          key: "/projects"
+        },
+        {
           label: "Animal Voice App",
           key: "/projects"
         }
@@ -21,7 +25,7 @@ export default defineComponent({
 })
 </script>
 <template>
-  <n-layout position="absolute" :native-scrollbar="false">
+  <n-layout style="background: #011627" position="absolute" :native-scrollbar="false">
     <n-layout-header
       mode="horizontal"
       style="background: #e4572e; padding-left: 10px"
@@ -31,8 +35,8 @@ export default defineComponent({
           <n-space justify="space-around" align="center" style="height: 100%">
             <router-link class="topNavigation" to="/">Home</router-link>
             <router-link class="topNavigation" to="/blogs">Blogs</router-link>
-            <n-dropdown :show-arrow="true" size="small" placement="bottom-start" trigger="hover" :options="options" @select="handleSelect"><h3 class="dropdown">Projects</h3></n-dropdown>
-            <a :href="`${base}/src/assets/ChristopherGSmith3975_Resume.PDF`" download
+            <n-dropdown :show-arrow="true" size="small" placement="bottom-start" trigger="hover" :options="options" @select="handleSelect"><h3 class="dropdown" @click="$router.push('/projects')">Projects</h3></n-dropdown>
+            <a href="../assets/ChristopherGSmith3975_Resume.pdf" download
               >My Resume</a
             >
           </n-space>
