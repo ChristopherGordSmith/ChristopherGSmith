@@ -1,16 +1,38 @@
-<script setup lang="ts">
+<script lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-</script>
+import { defineComponent } from 'vue'
+import router from "./router";
 
+export default defineComponent({
+  setup() {
+    return {
+      base: import.meta.env.BASE_URL,
+      options: [
+        {
+          label: "Animal Voice App",
+          key: "/projects"
+        }
+      ],
+      handleSelect(key: string) {
+        router.push(key);
+      }
+    }
+  }
+})
+</script>
 <template>
   <n-layout position="absolute" :native-scrollbar="false">
-    <n-layout-header mode="horizontal" style="background: #e4572e">
-      <n-grid style="height: 50px; width: 100%" :cols="12">
-        <n-gi :span="2">
+    <n-layout-header
+      mode="horizontal"
+      style="background: #e4572e; padding-left: 10px"
+    >
+      <n-grid cols="1 xs:1 s:1 m:1 l:5 xl:6 2xl:6" responsive="screen" style="height: 50px; width: 100%">
+        <n-gi>
           <n-space justify="space-around" align="center" style="height: 100%">
             <router-link class="topNavigation" to="/">Home</router-link>
             <router-link class="topNavigation" to="/blogs">Blogs</router-link>
-            <a href="src/assets/ChristopherGSmith3975_Resume.PDF" download
+            <n-dropdown :show-arrow="true" size="small" placement="bottom-start" trigger="hover" :options="options" @select="handleSelect"><h3 class="dropdown">Projects</h3></n-dropdown>
+            <a :href="`${base}/src/assets/ChristopherGSmith3975_Resume.PDF`" download
               >My Resume</a
             >
           </n-space>
@@ -25,8 +47,7 @@ import { RouterLink, RouterView } from "vue-router";
     <n-layout-footer style="background: #e07a5f">
       <n-grid
         style="min-height: 100px; width: 100%; padding-top: 20px"
-        :cols="2"
-        item-responsive
+        cols="3 xs:.5 s:1 m:2 l:2 xl:2 2xl:2" responsive="screen"
         :x-gap="100"
       >
         <n-gi>

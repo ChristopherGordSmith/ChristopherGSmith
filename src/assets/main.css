@@ -7,3 +7,15 @@ a {
 a:hover {
   background: #3d405b
 }
+
+.dropdown {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.dropdown:hover {
+  background: #3d405b
+}

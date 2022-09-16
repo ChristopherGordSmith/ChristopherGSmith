@@ -1,38 +1,43 @@
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  setup() {
+    return {
+      base: import.meta.env.BASE_URL
+    }
+  }
+})
 </script>
 
 <template>
-  <n-space vertical style="margin-top: 50px; margin-bottom: 50px">
-    <n-grid :cols="2">
-      <n-gi style="height: 400px">
+  <n-space vertical style="padding: 50px 100px 50px 100px">
+    <n-grid style="width: 100%" cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen">
+      <n-gi>
         <n-space vertical align="center"
           ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
-          <n-avatar round src="src/assets/professionalpic.jpg" :size="300"
+          <n-avatar round :src="`${base}src/assets/professionalpic.jpg`" :size="300"
         /></n-space>
       </n-gi>
-      <n-gi style="height: 400px"
+      <n-gi
         ><n-space vertical justify="space-around" style="margin-top: 80px"
-          ><n-h2 style="color: white; width: 600px"
+          ><n-h2 style="color: white;"
             >I'm an undergradute student studying Computer Science at The
             University of Texas at Arlington.</n-h2
           >
-          <n-h2 style="color: white; width: 600px"
+          <n-h2 style="color: white;"
             >I work part-time at Ayoka Systems as an intern for Web/Application
             Development.</n-h2
           >
-          <n-h2 style="color: white; width: 600px">
+          <n-h2 style="color: white;">
             My interests are in AI and Web Application Development.
           </n-h2>
         </n-space>
       </n-gi>
     </n-grid>
-    <n-h1 style="color: #e4572e; padding-left: 20px">Education</n-h1>
-    <n-grid
-      style="width: 100%; padding-left: 60px; padding-right: 60px"
-      :cols="2"
-      item-responsive
-      :x-gap="100"
-    >
+    <n-divider>
+    <n-h1 style="color: #e4572e">Education</n-h1> </n-divider>
+    <n-grid cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen" :x-gap="100">
       <n-gi>
         <n-space vertical>
           <n-h2 style="color: white">MAY 2023</n-h2>
@@ -62,13 +67,9 @@
         </n-space>
       </n-gi>
     </n-grid>
-    <n-h1 style="color: #e4572e; padding-left: 20px">Experience</n-h1>
-    <n-grid
-      style="width: 100%; padding-left: 60px; padding-right: 60px"
-      :cols="2"
-      item-responsive
-      :x-gap="100"
-    >
+    <n-divider>
+    <n-h1 style="color: #e4572e">Experience</n-h1></n-divider>
+    <n-grid cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen" :x-gap="100">
       <n-gi>
         <n-space vertical>
           <n-h3 style="color: white">2022 - Current</n-h3>
@@ -94,13 +95,9 @@
         </n-space>
       </n-gi>
     </n-grid>
-    <n-h1 style="color: #e4572e; padding-left: 20px">Skills</n-h1>
-    <n-grid
-      style="width: 100%; padding-left: 60px; padding-right: 60px"
-      :cols="2"
-      item-responsive
-      :x-gap="100"
-    >
+    <n-divider >
+    <n-h1 style="color: #e4572e">Skills</n-h1></n-divider>
+    <n-grid cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen" :x-gap="100">
       <n-gi>
         <n-space vertical>
           <n-h3 style="color: white">JavaScript</n-h3>
@@ -116,13 +113,9 @@
         </n-space>
       </n-gi>
     </n-grid>
-    <n-h1 style="color: #e4572e; padding-left: 20px">Projects</n-h1>
-    <n-grid
-      style="width: 100%; padding-left: 60px; padding-right: 60px"
-      :cols="2"
-      item-responsive
-      :x-gap="100"
-    >
+    <n-divider >
+    <n-h1 style="color: #e4572e">Projects</n-h1></n-divider>
+    <n-grid cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen" :x-gap="100">
       <n-gi>
         <n-space vertical>
           <n-h3 style="color: #e07a5f">Secret Santa</n-h3>
@@ -139,7 +132,7 @@
       <n-gi>
         <n-space vertical>
           <n-h3 style="color: #e07a5f">Animal Voice App</n-h3>
-          <n-h3 style="color: white; width: 650px"
+          <n-h3 style="color: white;"
             >In this project my team designed an app that would take in audio
             files and decipher what was recorded. We used Andriod Studio and its
             GUI system to design the layout of the app. Then we used Firebase to
