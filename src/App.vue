@@ -36,7 +36,7 @@ export default defineComponent({
             <router-link class="topNavigation" to="/">Home</router-link>
             <router-link class="topNavigation" to="/blogs">Blogs</router-link>
             <n-dropdown :show-arrow="true" size="small" placement="bottom-start" trigger="hover" :options="options" @select="handleSelect"><h3 class="dropdown" @click="$router.push('/projects')">Projects</h3></n-dropdown>
-            <a href="dist/assets/ChristopherGSmith3975Resume.pdf" download
+            <a href="assets/ChristopherGSmith3975Resume.pdf" download
               >My Resume</a
             >
           </n-space>
