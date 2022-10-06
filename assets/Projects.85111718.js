@@ -1,1 +1,0 @@
-import{_ as e,o,e as t,f as c}from"./index.80a19a2b.js";const s={},r=c("h1",{style:{color:"white"}},"No Projects have been uploaded yet",-1),n=[r];function a(_,d){return o(),t("div",null,n)}const f=e(s,[["render",a]]);export{f as default};
