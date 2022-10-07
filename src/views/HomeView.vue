@@ -1,13 +1,4 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  setup() {
-    return {
-      base: import.meta.env.BASE_URL
-    }
-  }
-})
 </script>
 
 <template>
@@ -22,7 +13,7 @@ export default defineComponent({
       <n-gi
         ><n-space vertical justify="space-around" style="margin-top: 80px"
           ><n-h2 style="color: white;"
-            >I'm an undergradute student studying Computer Science at The
+            >I'm an undergraduate student studying Computer Science at The
             University of Texas at Arlington.</n-h2
           >
           <n-h2 style="color: white;"
@@ -48,7 +39,7 @@ export default defineComponent({
           <n-h3 style="color: white"
             >Currently attending the University of Texas at Arlington as a 4th
             year student. I have held a consistent GPA of 3.4. My classes this
-            semester are currently Data Mining, Artifiical Intelligence, and
+            semester are currently Data Mining, Artificial Intelligence, and
             Robotics.</n-h3
           >
         </n-space>
@@ -89,7 +80,7 @@ export default defineComponent({
             >Intern, MISD IT Department, Mansfield, TX</n-h3
           >
           <n-h3 style="color: white"
-            >Maintaining and troubeshooting servers and desktops</n-h3
+            >Maintaining and troubleshooting servers and desktops</n-h3
           >
           <n-h3 style="color: white">Professional client communication</n-h3>
         </n-space>
@@ -134,7 +125,7 @@ export default defineComponent({
           <n-h3 id="project" style="color: #e07a5f; cursor: pointer" @click="$router.push('/projects')">Animal Voice App</n-h3>
           <n-h3 style="color: white;"
             >In this project my team designed an app that would take in audio
-            files and decipher what was recorded. We used Andriod Studio and its
+            files and decipher what was recorded. We used Android Studio and its
             GUI system to design the layout of the app. Then we used Firebase to
             create user accounts with data such as a username and password. To
             decipher the animal, we used python and implemented machine learning

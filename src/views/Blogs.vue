@@ -1,7 +1,11 @@
+<script setup lang="ts">
+import KaggleTutorial from './blogs/KaggleTutorial.vue';
+</script>
+
 <template>
-  <div>
-    <h1 style="color: white">No blogs have been uploaded yet</h1>
-  </div>
+  <n-space style="padding: 50px 100px 50px 100px">
+    <KaggleTutorial />
+  </n-space>
 </template>
 
 <style>
