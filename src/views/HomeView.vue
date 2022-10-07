@@ -16,7 +16,7 @@ export default defineComponent({
       <n-gi>
         <n-space vertical align="center"
           ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
-          <n-avatar round src="assets/ResumeLogo.png" :size="300"
+          <n-avatar round src="assets/ResumeProfilePic.jpg" :size="300"
         /></n-space>
       </n-gi>
       <n-gi
