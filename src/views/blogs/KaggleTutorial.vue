@@ -37,9 +37,12 @@
                         model produced a score of .77511 accuracy.
                     </n-h2>
                     <n-image src="assets/KaggleTutorialSnip5.png" width="800" />
+                    
                 </n-space>
             </n-gi>
         </n-grid>
+        <h1 style="color: white">Reference:</h1>
+        <a href="https://www.kaggle.com/code/alexisbcook/titanic-tutorial/notebook">Alexis Cook's Titanic Kaggle Tutorial (Click me)</a>
     </n-space>
 </template>
 
