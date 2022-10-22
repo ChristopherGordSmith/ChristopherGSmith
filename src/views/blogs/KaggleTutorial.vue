@@ -1,6 +1,6 @@
 <template>
     <n-space vertical>
-        <n-h1 style="color: #e4572e; font-size: 40px;">Kaggle Titanic Tutorial</n-h1>
+        
         <n-grid cols="1" responsive="screen" :x-gap="100">
             <n-gi>
                 <n-space>
