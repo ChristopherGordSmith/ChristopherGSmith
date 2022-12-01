@@ -2,6 +2,7 @@
 import KaggleTutorial from './blogs/KaggleTutorial.vue';
 import ImageClassifier from './blogs/ImageClassifier.vue'
 import NaiveBayesClassifier from './blogs/NaiveBayesClassifier.vue';
+import ImageClassificationCompare from './blogs/ImageClassificationCompare.vue'
 </script>
 
 <template>
@@ -24,6 +25,12 @@ import NaiveBayesClassifier from './blogs/NaiveBayesClassifier.vue';
           <n-h1 style="color: #e4572e; font-size: 40px;">Naive Bayes Classifier</n-h1>
         </template>
         <NaiveBayesClassifier />
+      </n-collapse-item>
+      <n-collapse-item>
+        <template #header>
+          <n-h1 style="color: #e4572e; font-size: 40px;">Image Classifiers Comparison</n-h1>
+        </template>
+        <ImageClassificationCompare />
       </n-collapse-item>
     </n-collapse>
   </n-space>
