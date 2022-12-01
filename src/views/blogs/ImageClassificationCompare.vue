@@ -146,7 +146,7 @@
                         I believe SVM and KNN suffered due to major over fitting of the models to their training data. They are designed to rely on the training data solely, but
                         as the complexity or features increased the model quickly grew less accurate. CNN did suffer from over fitting, but not as bad as KNN and SVM.
                     </n-h2>
-                    <n-h1 style="color: #e4572e">Pros & Cons For Each Classifier</n-h1>s
+                    <n-h1 style="color: #e4572e">Pros & Cons For Each Classifier</n-h1>
                     <n-h2 style="font-weight: 700;">
                         <n-h2 style="color: white">Convolutional Neural Networks</n-h2>
                         <n-table :bordered="false" :single-line="false" style="margin-left: 20%; margin-right: 20%">
@@ -236,12 +236,44 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Used regex to take off unneeded special characters</td>
-                                    <td>Allowed the data to be used for raw words that didn't have any extra unneeded
-                                        information</td>
-                                    <td>Had to allow sum words to be missed since the the special characters such as
-                                        single quotes needed to remain.
-                                        I also had to learn regex and how to utilize it for the splitting.
+                                    <td>I briefly described Convolutional Neural Networks and how it was used in the code</td>
+                                    <td>I gave a description of Convolutional Neural Networks so they could understand how the model
+                                        was being run from the code. I referenced the earlier post I made that gave greater detail for this algorithm.
+                                    </td>
+                                    <td>None
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>I ran through the concepts of Support Vector Machines and how it was used in the code</td>
+                                    <td>I described in the blog posts Support Vector Machines from what I learned in class to give the reader an
+                                        understanding of what the code is doing to the images.
+                                    </td>
+                                    <td>None
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>I ran through the concepts of K Nearest Neighbors and how it was used in the code</td>
+                                    <td>I described in the blog posts K Nearest Neighbors from what I learned in class to give the reader an
+                                    understanding of what the code is doing to the images.
+                                    </td>
+                                    <td>None
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>I tuned each model to gather the best accuracy I could from each algorithm</td>
+                                    <td>I used the dimensions of the image for KNN and SVM models to gather a more accurate model for the comparisons. For
+                                        CNN I adjusted the layers, nodes, and epochs.
+                                    </td>
+                                    <td>CNN and SVM took hours to run and also ran into corrupt files that I had to remove. Additionally, I had issues with black and white
+                                        images that I was able to modify in the code to be RGB.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gave a model comparison at the end</td>
+                                    <td>From the information I gathered from the tests and results I graphed them all. I compared each model and gave theories as to why each model
+                                        reacted the way it did. I also ran a pros and cons of each algorithm based on the test results.
+                                    </td>
+                                    <td>None
                                     </td>
                                 </tr>
                             </tbody>
@@ -261,13 +293,43 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>"https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference"
+                                    <td>"https://vijayabhaskar96.medium.com/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720"
                                     </td>
-                                    <td>I used this website to learn Regex
+                                    <td>I used their training model for CNN in my code, but not their data generator and prediction code.
                                     </td>
-                                    <td>This allowed me to split my sentences using spaces and other delimiters for the
-                                        "re" python library.
+                                    <td>This allowed me to experiment with the hyper parameters of the data.
                                     </td>
+                                </tr>
+                                <tr>
+                                    <td>"https://www.kaggle.com/datasets/whenamancodes/wild-animals-images"
+                                    </td>
+                                    <td>I used their dataset for my experiments.
+                                    </td>
+                                    <td>I converted each of these folders into a training, validation, and test folder. I used a 60:20:20 ratio
+                                    respectively.
+                                    Each folder also needed to have a subfolder for cheetahs, hyenas, tigers, foxes, lions, and wolves that contained
+                                    their respective images.
+                                    This was done so the Keras model, and the sklearn model would work with this dataset. This took me an 2 hours to implement.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>"https://vijayabhaskar96.medium.com/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720"
+                                    </td>
+                                    <td>I used their data generator and prediction code for my CNN model.</td>
+                                    <td>This allowed me to derive results from the experiments I conducted on the model using various hyper
+                                        parameters.</td>
+                                </tr>
+                                <tr>
+                                    <td>"https://medium.com/analytics-vidhya/image-classification-using-machine-learning-support-vector-machine-svm-dc7a0ec92e01"
+                                    </td>
+                                    <td>I used their SVM model for images implementation.</td>
+                                    <td>I was able to experiment with the hyper parameter of the image dimensions used to derive different results.</td>
+                                </tr>
+                                <tr>
+                                    <td>"https://medium.com/swlh/image-classification-with-k-nearest-neighbours-51b3a289280"
+                                    </td>
+                                    <td>I used their KNN model for images implementation.</td>
+                                    <td>I was able to experiment with the hyper parameter of the image dimensions used to derive different results.</td>
                                 </tr>
                             </tbody>
                         </n-table>
@@ -287,6 +349,11 @@
                             SVM Classifier</a>
                         <a style="color: #e07a5f" href="assets/knn-classifier.ipynb" download>
                             KNN Classifier</a>
+                    </n-h2>
+                    <n-h1 style="color: #e4572e">Video:</n-h1>
+                    <n-h2>
+                        <a style="color: #e07a5f" href="https://www.youtube.com/watch?v=GyZ4hPNV2F4&ab_channel=ChristopherSmith" target="_blank">
+                            Why CNN was the best model for image classification</a>
                     </n-h2>
                 </n-space>
             </n-gi>
