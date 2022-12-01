@@ -293,7 +293,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>"https://vijayabhaskar96.medium.com/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720"
+                                    <td>"https://www.geeksforgeeks.org/python-image-classification-using-keras/"
                                     </td>
                                     <td>I used their training model for CNN in my code, but not their data generator and prediction code.
                                     </td>
