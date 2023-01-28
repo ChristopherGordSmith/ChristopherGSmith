@@ -96,7 +96,7 @@
                     <n-h2 style="color: white">
                         In the experiments I would adjust the hyper parameters of the model to derive different results.
                         Each result was recording on an 
-                         <a style="color: #e07a5f" href="assets/Assignment_1_Experiment_Data.xlsx" download>excel sheet</a>
+                         <a style="color: #e07a5f" href="assets/ImageClassifier/Assignment_1_Experiment_Data.xlsx" download>excel sheet</a>
                         with each row representing an experiment. The columns representing the results:
                         training time (seconds), accuracy, batch size, epochs, node layers, loss(percent).
                     </n-h2>
@@ -106,7 +106,7 @@
                         the experiments I would monitor the training vs. validation performance to make sure that
                         over fitting wouldn't occur and if so I would report it in the experiment.
                     </n-h2>
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/initial_state_loss_graph.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/initial_state_loss_graph.png" width="800" />
                     <n-h2 style="color: white">
                         For accuracy I would use this prediction output for my accuracy that I calculated myself.
                         Note that the above image does have an accuracy for training and validation, but I used
@@ -119,25 +119,25 @@
                         if this could possibly improve performance. This did not improve performance and actually resulted
                         in a negative effect in loss and accuracy.
                     </n-h2>
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/Extra_layer.png" width="800" />
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/experiment_1_loss_graph.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/Extra_layer.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/experiment_1_loss_graph.png" width="800" />
                     <n-h2 style="color: white">
                         In this experiment I kept the initial state and doubled the epochs from 10 to 20 in hopes that
                         more runs in the training model would result in increased performance. This actually did increase
                         the accuracy, but at the cost of increased training time. However, according to the line graph
                         my training had over fitting occur.
                     </n-h2>
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/double_epochs.png" width="800" />
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/experiment_2_loss_graph.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/double_epochs.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/experiment_2_loss_graph.png" width="800" />
                     <n-h2 style="color: white">
                         In this experiment I kept the initial state and doubled the batch size from 16 to 32. The result of this 
                         was a slightly faster training time. The training model did take a slight decrease in accuracy and a significant
                         increase in loss.
                     </n-h2>
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/double_batch.png" width="800" />
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/experiment_3_loss_graph.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/double_batch.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/experiment_3_loss_graph.png" width="800" />
                     
-                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/all_experiments.png" width="800" />
+                    <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifier/all_experiments.png" width="800" />
                     
                     <n-h2 style="color: white">
                         <n-h1 style="color: #e4572e">Conclusion</n-h1>
@@ -277,10 +277,10 @@
                     
                     <n-h1 style="color: #e4572e">Downloadable Code:</n-h1>
                     <n-h2>
-                        <a style="color: #e07a5f" href="assets/Reference_Code.ipynb" download>Original code from geeks for geeks</a>
+                        <a style="color: #e07a5f" href="assets/ImageClassifier/Reference_Code.ipynb" download>Original code from geeks for geeks</a>
                     </n-h2>
                     <n-h2>
-                        <a style="color: #e07a5f" href="assets/data-mining-assignment-1.ipynb" download>My implementation with experiments</a>
+                        <a style="color: #e07a5f" href="assets/ImageClassifier/data-mining-assignment-1.ipynb" download>My implementation with experiments</a>
                     </n-h2>
                 </n-space>
             </n-gi>

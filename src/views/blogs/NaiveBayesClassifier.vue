@@ -47,11 +47,11 @@
                         Bayesian Theorem is the formula that Naïve Bayes uses to produce a probability for a given class based on the data of
                         past events and their outcomes. It uses a Hypothesis (H) and Evidence (E) to made a prediction. Hypothesis is what 
                         the algorithm is querying for and Evidence is prior knowledge given.
-                        <n-image style="margin-bottom: 0px;margin-left: 30%; margin-right: 30%" src="assets/BayesTheorem.jpg" width="500" />
+                        <n-image style="margin-bottom: 0px;margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/BayesTheorem.jpg" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Bayes formula</n-h5>
                         This formula can be broken down into P(H and E)/P(E), where P(H and E) is when both H and E are true.
                         P(H and E) is the joint probability and P(E) is the Margin probability.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/BayesTheoremEvidence.jpg" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/BayesTheoremEvidence.jpg" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Marginalization</n-h5>
                         P(E) can be broken down into the summation of the products of the probability of the Hypothesis with the Evidence
                         given the Hypothesis and the opposite of the Hypothesis with Evidence given the opposite of the Hypothesis.
@@ -70,12 +70,12 @@
                         reside in the Feedback array of a given class. Diction would contain the word and the occurrence of
                         that word for the given class. This was so I could make a table like figure making coming up with 
                         probabilities easier.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveClasses.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/NaiveClasses.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Document Classes</n-h5>
                         After setting up the classes I then took the data from the Kaggle challenge and had it separated into
                         training, development, and testing datasets. They were split 60 percent : 20 percent : 20 percent
                         respectively. I did have to throw away the data that had absent sentences so I could use the data properly.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveDataSetup.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/NaiveDataSetup.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Naive Data Setup</n-h5>
                         I setup a Dictionary of all the words utilized in the dataset from the Kaggle challenge. I used the python library
                         're' to split the sentences by word. I did have to
@@ -85,32 +85,32 @@
                         so I could gather as many words without special characters as possible while using re.split(). Also I made every word lower
                         case so the I could include words at the start of the sentences. After words any words that were below 5 occurrences
                         were dropped from the dictionary.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/DictionaryInitialize.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/DictionaryInitialize.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Dictionary Initialization</n-h5>
                         I then used the FeedBack class to get my classes for the dataset. I would store them all in results with each node
                         being a different class it would find when exploring the dataset. If the class already was known it would just add
                         data to the node's array. Additionally, if the word was new to the node's array then I would initialize a new Diction
                         and append it to the end. I also used the 're' python library to split my data and applied the same Regex expression
                         used on the Dictionary.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ResultsInitialize.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/ResultsInitialize.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Results Initialization</n-h5>
                         At this point I was ready to try calculating a probability using my formed dataset. I calculated the probability of
                         getting the word "the" out of the entire dataset which just was simply the occurrences of the word "the" divided by
                         the total words in the dataset. The occurrence of "the" was 8095 and the probability of getting "the" was 1.8 percent.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/theProbs.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/theProbs.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">"the" probability</n-h5>
                         After that I decided to try using Naive Bayes to come up with a probability of getting "the" given that
                         the class was "Requirement". I broke up the math and printed out the result of each operation. Starting with P(Hypothesis),
                         P(Evidence|Hypothesis), P(Evidence|notHypothesis), then P(Evidence) my margin. I then applied the Bayes Theorem formula
                         and came out 3.3 percent chance. This means my chances of getting "the" with the prior knowledge of the word coming
                         from the class "Requirement" was pretty low. 
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/theGivenReq.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/theGivenReq.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">"the" given requirement probability
                         </n-h5>
                         I then designed a function using the same logic of the code above that could take in any word and class dynamically.
                         This would allow for readability and a nicer look to the function. I could also now call this function multiple times
                         and save time.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/probsFunction.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/probsFunction.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">probs Function</n-h5>
                         In the code below I sought out to get the top 10 likely words chosen for each class in my dataset using the training
                         dataset. I would loop through each word in the dictionary and use my probs() function to return the probability
@@ -118,14 +118,14 @@
                         The result would then be stored with the word being checked in a node in each classes respective list.
                         After getting all the words and their probabilities for each given class. I sorted each class of words in ascending
                         order and took the first 10 words.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/MakingTop10.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/MakingTop10.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Top 10 setup</n-h5>
                         I below is a result of each class's top 10 words and their probabilities given their respective class.
                         This information is holds value as words such as: 'knowledge', 'communication', and 'degree' are present
                         in the results. Which means these words are most likely what recruiters would be looking for on a resume
                         for the given class. However, it is made apparent in the results words such as: "a", "and", "of" are a waste
                         of information as it logically doesn't contribute to the prediction.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/top10words.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/NaiveBayesClassifier/top10words.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:45%; margin-left:45%">Top 10 results</n-h5>
                         This is the results of the code I wrote for this challenge. To conclude I wasn't able to get as far as I
                         would like with my code, but I was able to come up with a function that could be used generically to gather
@@ -247,7 +247,7 @@
                     
                     <n-h1 style="color: #e4572e">Downloadable Code:</n-h1>
                     <n-h2>
-                        <a style="color: #e07a5f" href="assets/Data-Mining-Assignment-2.ipynb" download>
+                        <a style="color: #e07a5f" href="assets/NaiveBayesClassifier/Data-Mining-Assignment-2.ipynb" download>
                         My Naive Bayes Model</a>
                     </n-h2>
                 </n-space>

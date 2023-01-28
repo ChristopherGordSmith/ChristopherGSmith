@@ -6,8 +6,8 @@ import ImageClassificationCompare from './blogs/ImageClassificationCompare.vue'
 </script>
 
 <template>
-  <n-space style="padding: 50px 100px 50px 100px">
-    <n-collapse default-expanded-names="1" accordion>
+  <n-space style="padding: 50px 100px 50px 100px;">
+    <n-collapse default-expanded-names="1" accordion style="padding: 0px 1200px 0px 0px;">
       <n-collapse-item >
         <template #header>
           <n-h1 style="color: #e4572e; font-size: 40px;">Kaggle Titanic Tutorial</n-h1>

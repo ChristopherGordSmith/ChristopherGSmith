@@ -15,18 +15,18 @@
                     </n-h2>
                     <n-h2 style="color: white">Going into the directory with the training data,
                         testing data and example prediction .csv files.</n-h2>
-                    <n-image src="assets/KaggleTutorialSnip1.png" width="800" />
+                    <n-image src="assets/KaggleTitanicTutorial/KaggleTutorialSnip1.png" width="800" />
                     <n-h2 style="color: white">Assigning training data and testing data. Also
                     displaying the 1st five passengers with their respective data for each dataset.</n-h2>
-                    <n-image src="assets/KaggleTutorialSnip2.png" width="800" />
+                    <n-image src="assets/KaggleTitanicTutorial/KaggleTutorialSnip2.png" width="800" />
                     <n-h2 style="color: white">Testing if gender_submission.csv prediction of all
                         female passengers survived and all male passengers died. Since the numbers are
                         74% women and 18% men we can say that this prediction is significantly inaccurate.
                     </n-h2>
-                    <n-image src="assets/KaggleTutorialSnip3.png" width="800" />
+                    <n-image src="assets/KaggleTitanicTutorial/KaggleTutorialSnip3.png" width="800" />
                     <n-h2 style="color: white">Using the Random Tree Model to make predictions based
                     on a given passenger's data.</n-h2>
-                    <n-image src="assets/KaggleTutorialSnip4.png" width="800" />
+                    <n-image src="assets/KaggleTitanicTutorial/KaggleTutorialSnip4.png" width="800" />
                     <n-h2 style="color: white">
                         After following the tutorial from Alexis Cook we built a prediction model
                         that uses a random forest model. A random forest model produces trees that
@@ -36,7 +36,7 @@
                         sex, amount of siblings and spouses, amount of parents and children. This
                         model produced a score of .77511 accuracy.
                     </n-h2>
-                    <n-image src="assets/KaggleTutorialSnip5.png" width="800" />
+                    <n-image src="assets/KaggleTitanicTutorial/KaggleTutorialSnip5.png" width="800" />
                     
                 </n-space>
             </n-gi>

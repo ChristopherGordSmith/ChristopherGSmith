@@ -54,7 +54,7 @@
                         doesn't have a training time as it doesn't need to create a vector/line to separate each class. Instead when asked to predict
                         the class of an object/image they simply grab their K Nearest Neighbors. They measure each feature from one another using 
                         Euclidean Distance.
-                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/EuclideanDistance.png" width="500" />
+                        <n-image style="margin-left: 30%; margin-right: 30%" src="assets/ImageClassifierComparison/EuclideanDistance.png" width="500" />
                         <n-h5 style="margin-top: 0px; color: white; margin-right:44%; margin-left:44%">Euclidean Distance
                         </n-h5>
                         Where x and y are two objects and i is a feature of the objects. Once comparing the distance of each object to the object to
@@ -72,22 +72,22 @@
                         on using Keras flow_from_directory and generators”</a>.
                     The former allowed me to create and modify the hyper parameters of the model. While the latter allowed me to implement predictions
                     so I could measure accuracy.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalCNNCode1.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalCNNCode1.png" width="500" />
                     In the code above I'm getting a count of all the files to reconfirm the amount in each directory for each dataset. The dataset was split 60:20:20
                     Train:Validation:Test.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalCNNCode2.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalCNNCode2.png" width="500" />
                     In this snippet of code I set up the epochs which tells the model how many times to run through and the batch size. I then edited
                     the number of layers and the number of node/parameters of each layer till my accuracy rose enough. Generally high epochs will increase
                     the accuracy, but this is also prone to overfitting where the model is too tuned to the training that it can't identify other objects.
                     In other words it can be too perfect. During testing this can hurt the accuracy of the model.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalCNNCode3.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalCNNCode3.png" width="500" />
                     At this point we are getting the images of the models and turning them into arrays that the program can understand. Then we fit the model
                     with our training data and hyper parameters.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalCNNCode4.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalCNNCode4.png" width="500" />
                     Lastly we test our model and measure the accuracy of the model. Below is the output of the model with a layout of the layers and
                     the result of running the dataset with this model. This model did suffer a little bit of over fitting, but I don't think it was enough
                     to give bad results.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalCNNCode5.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalCNNCode5.png" width="500" />
                     </n-h2>
                     <n-h1 style="color: #e4572e">Source code for Support Vector Machines</n-h1>
                     <n-h2 style="color: white">
@@ -97,21 +97,21 @@
                     Since their code using sklearn's train_test_split I had images merge together and then adjusted the test size on the function. In for loop you can see the dimensions of the
                     image being resized to a set image. Since the code was using pixel intensities to measure, I treated the dimension sizes there as a hyper parameter and adjusted how many pixels
                     would be used.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalSVMCode1.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalSVMCode1.png" width="500" />
                     After this we set up our SVM with a Gamma for influence, C for cost of misclassifications, and the Kernel. Afterwards we train our model and fit it. Then we start
                     predicting images with our test data and record the accuracy.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalSVMCode2.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalSVMCode2.png" width="500" />
                     Below is a result of each dimensions size I used as a hyper parameter to derive a better accuracy.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/100by100.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/100by100time.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/150by150.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/150by150time.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/fiftybyfifty.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/fiftybyfiftytime.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/100by100.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/100by100time.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/150by150.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/150by150time.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/fiftybyfifty.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/fiftybyfiftytime.png" width="500" />
                     In these graphs below you can see that as the dimensions of the images got bigger the training time dramatically increased, however the accuracy
                     of the model did not. I felt that maybe since the features are pixels it would actually become too complex for the SVM to simply use distances.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/SVMTrainTime.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/SVMAccuracy.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/SVMTrainTime.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/SVMAccuracy.png" width="500" />
                     In the final comparison of the algorithms I'll be using the 100 by 100 dimensions result.
                     </n-h2>
                     <n-h1 style="color: #e4572e">Source code for K Nearest Neighbors</n-h1>
@@ -123,18 +123,18 @@
                         all of the data together since they were also using the sklearn's train_test_split and I simply adjusted the test size.
                         In the load_image_files you can see a dimension parameter which I treated as a hyper parameter to achieve better accuracies.
                         These images also treated pixel intensities as features.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalKNNCode1.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalKNNCode1.png" width="500" />
                         In this part of the code we are setting up the testing and training data and to be fitted into the KNeighborsClassifier model.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalKNNCode2.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalKNNCode2.png" width="500" />
                         At this point we are fitting the model and evaluating the score. In their code they wrote a for loop that would find the best K
                         for the model and report that K with their accuracy. I extended the range to 200 to see if checking more Ks would possibly improve accuracy.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/FinalKNNCode3.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/FinalKNNCode3.png" width="500" />
                         Below you can see the results of each dimension I tried for the images. My theory was adding a greater dimension would increase the accuracy
                         since more data would be utilized, however it seems the higher the dimension worse it got.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/KNN150by150.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/KNN200by200time.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/KNN250by250.png" width="500" />
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/KNNAccuracy.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/KNN150by150.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/KNN200by200time.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/KNN250by250.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/KNNAccuracy.png" width="500" />
                         I believe the results correlated with the same issue that SVM had with too many features being used therefore being too complex for SVM or KNN
                         to be accurate. Additionally, you can see the more K increased the worse the model did. In the final comparison I used the 150 by 150 dimension result.
                     </n-h2>
@@ -142,7 +142,7 @@
                     <n-h2 style="color: white">
                         Below is a comparison of each model below with their training times and accuracies. The Convolutional Neural Network proved to be the best for accuracy,
                         but had a long training time. Did well behind CNN in second, but also had a very long training time. KNN came in last, but had a dramatically lesser training time.
-                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/AlgorithmComparisons.png" width="500" />
+                        <n-image style="margin-left: 35%; margin-right: 35%" src="assets/ImageClassifierComparison/AlgorithmComparisons.png" width="500" />
                         I believe SVM and KNN suffered due to major over fitting of the models to their training data. They are designed to rely on the training data solely, but
                         as the complexity or features increased the model quickly grew less accurate. CNN did suffer from over fitting, but not as bad as KNN and SVM.
                     </n-h2>
@@ -343,11 +343,11 @@
 
                     <n-h1 style="color: #e4572e">Downloadable Code:</n-h1>
                     <n-h2>
-                        <a style="color: #e07a5f" href="assets/final-data-mining-project.ipynb" download>
+                        <a style="color: #e07a5f" href="assets/ImageClassifierComparison/final-data-mining-project.ipynb" download>
                             CNN Classifier</a>
-                        <a style="color: #e07a5f" href="assets/SVMImageClassifier.ipynb" download>
+                        <a style="color: #e07a5f" href="assets/ImageClassifierComparison/SVMImageClassifier.ipynb" download>
                             SVM Classifier</a>
-                        <a style="color: #e07a5f" href="assets/knn-classifier.ipynb" download>
+                        <a style="color: #e07a5f" href="assets/ImageClassifierComparison/knn-classifier.ipynb" download>
                             KNN Classifier</a>
                     </n-h2>
                     <n-h1 style="color: #e4572e">Video:</n-h1>

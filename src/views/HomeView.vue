@@ -4,12 +4,6 @@
 <template>
   <n-space vertical style="padding: 50px 100px 50px 100px">
     <n-grid style="width: 100%" cols="2 xs:1 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen">
-      <n-gi>
-        <n-space vertical align="center"
-          ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
-          <n-avatar round src="assets/ResumeProfilePic.jpg" :size="300"
-        /></n-space>
-      </n-gi>
       <n-gi
         ><n-space vertical justify="space-around" style="margin-top: 80px"
           ><n-h2 style="color: white;"
@@ -24,6 +18,12 @@
             My interests are in AI and Web Application Development.
           </n-h2>
         </n-space>
+      </n-gi>
+      <n-gi>
+        <n-space vertical align="center"
+          ><n-h1 style="color: #e4572e">Christopher Smith</n-h1>
+          <n-avatar round src="assets/ChrisChad.png" :size="300"
+        /></n-space>
       </n-gi>
     </n-grid>
     <n-divider>
